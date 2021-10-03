@@ -1,2 +1,2 @@
 # simple-projects
- Simple webdevelopment projects with HTML and CSS
+Webdevelopment projects with HTML and CSS
