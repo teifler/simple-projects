@@ -1,83 +1,131 @@
-<html>
-  <head>
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto+Slab:300,400" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="reset.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-  </head>
+body {
+  font-size: 1.2em;
+}
 
-  <body>
-    <div id = "app">
+#app {
+  width: 90%;
+  margin: auto;
+}
 
-      <div class="headLine">
-       <img src="https://content.codecademy.com/courses/learn-css-grid/project-iii/media/group-2.png">
-        <p> An architecture blog </p>
-      </div>
+img {
+  max-width: 100%
+}
 
-      <!-- the grid -->
-      <div class="grid">
-        <!--   section 1 -->
-        <div class="box a">
-          <img  src="https://content.codecademy.com/courses/learn-css-grid/project-iii/media/pexels-big.jpg">
-        </div>
-        <div class="box b title">
-          Repurposed Living
-        </div>
-        <div class="box c">
-          Bassicarella Architectes, Hamburg, Germany Repurposed Housing
-        </div>
-
-        <!--   section 2 -->
-        <div class="box d">
-          <img  src = "https://content.codecademy.com/courses/learn-css-grid/project-iii/media/pexels-2.jpg">
-        </div>
-        <div class="box e title">
-          Angles de Pyramid Interiors
-        </div>
-        <div class="box f">
-          Bassicarella Architectes,
-          Madrid, Spain
-          Office Building
-        </div>
-
-        <!--   section 3-->
-        <div class="box g">
-          <img  src = "https://content.codecademy.com/courses/learn-css-grid/project-iii/media/pexels-3.jpg">
-        </div>
-        <div class="box h title">
-          Intricate Patter Play
-        </div>
-        <div class="box i">
-          Bassicarella Architectes, Dubai, UAE Museum
-        </div>
+.grid {
+  display: grid;
+  width: 900px;
+  height:3000px;
+  margin: auto;
+  grid-template: repeat(30, 1fr) / repeat(12, 1fr);
+}
 
 
-        <!--   section 4-->
-        <div class="box j">
-          <img  src = "https://content.codecademy.com/courses/learn-css-grid/project-iii/media/pexels-4.jpg">
-        </div>
-        <div class="box k title">
-          Healing House Path
-        </div>
-        <div class="box l">
-          Bassicarella Architectes,
-          Beijing, China
-          Temple
-        </div>
+/* set 1: repurposed living */
+.a {
+  grid-area: 1 / 3 / 5 /13 
+}
 
-        <!--   section 5-->
-        <div class="box m">
-          <img  src = "https://content.codecademy.com/courses/learn-css-grid/project-iii/media/pexels-5.jpg">
-        </div>
-        <div class="box n title">
-          Curved Perfection
-        </div>
-        <div class="box o">
-          Bassicarella Architectes,
-          Buenos Aires, Argentina
-          Condominium
-        </div>
-      </div>
-    </div>
-  </body>
+.b {
+  grid-area: 2 / 2 / 3 / 4;
+}
 
-</html>
+.c {
+  grid-area: 4 / 1 / 5 / 4; 
+}
+
+/* set 2: angles */
+
+.d {
+  grid-area: 5 / 1 / 12/ 7;
+}
+
+.e {
+  grid-area: 7 / 6 / 9 / 10;
+}
+
+.f {
+  grid-area: 9 / 7 / 10 / 10;
+}
+
+/* set 3: pattern play */
+
+.g {
+  grid-area: 11 / 3 / 16 / 13;
+}
+
+.h {
+  grid-area: 12 / 2 / 14 / 5;
+  }
+.i {
+  grid-area: 14 / 1 / 15 / 4;
+}
+
+/* set 4: healing house */
+
+.j {
+  grid-area: 15 / 1 / 22 / 7;
+}
+
+.k {
+  grid-area: 17 / 6 / 19 / 10;
+  }
+
+.l {
+  grid-area: 19 / 7 / 20 / 9;
+}
+
+/* set 5: curved perfection */
+
+.m {
+  grid-area: 21 / 3 / 27 / 13;
+}
+
+.n {
+  grid-area: 22 / 2 / 24 / 5;
+}
+
+.o {
+  grid-area: 24 / 1 / 26 / 4;
+}
+
+.headLine {
+  margin-top: 5vh;
+  height: 20vh;
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  font-size: 120%;
+  margin-bottom: 10vh;
+}
+
+.box {
+  font-family: 'Roboto Slab', serif;
+  font-size: 90%;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 180%;
+  font-family: 'Playfair Display', serif;
+  text-decoration: underline;
+}
+
+/* media queries */ 
+
+@media (min-width: 1150px) {
+  #app {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 650px) {
+  .grid {
+
+  }
+  
+  .title {
+    width: 65%;
+    font-size: 120%;
+  }
+}
