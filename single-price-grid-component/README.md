@@ -1,6 +1,6 @@
 Frontend Mentor - Single Price Grid Component
 
-Solution:
+Solution:https://teifler.github.io/simple-projects/single-price-grid-component/index.html
 
 
 
