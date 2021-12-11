@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/* variables declaration colors and padding */ 
+:root {
+    /* Primary */
+    --white: #fff;
+    --mainCyan: hsl(179, 62%, 43%);
+    --lmainCyan: hsl(179, 62%, 49%);
+    --mainYellow:  hsl(71, 73%, 54%);
+    --darkYellow:  hsl(71, 73%, 48%);
+    /* Rest of colors */
+    --lighttgrey: hsl(204, 43%, 93%);
+    --grayBlue: hsl(218, 22%, 67%);
+
+    /* Padding */ 
+    --paddingY: 1.8rem;
+    --paddingX: 1.5rem;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+    line-height: 1.1;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+p {
+    margin-top: 0;
+}
+
+
+
+body {
+    font-family: 'Karla', sans-serif;
+    /* 1rem == 16px -- makes font size adjustable */ 
+    font-size: 1rem;
+    background-color: var(--grayBlue);
+    line-height: 1.3;
+    padding: 1.8rem;
+    color: var(--grayBlue)
+}
+
+/* All direct childs of price should have the padding top & button and left + right */ 
+.grid-container > * {
+    padding: var(--paddingX) var(--paddingY);
+}
+
+
+/* TOP PART */ 
+.community{
+    background-color: var(--white);
+
+}
+
+.community h2 {
+    color: var(--mainCyan);
+    font-weight: bold; 
+}
+.community h3 {
+    color: var(--mainYellow);
+    font-weight: bold; 
+}
+
+.community p {
+    font-size: 0.90rem;
+    line-height: 1.75;
+    margin-bottom: 0;
+}
+
+
+/* Middel Part (subscription) */ 
+
+.subscription {
+    background-color: var(--mainCyan);
+    color: white;
+
+}
+p.month {
+    margin-bottom: 0.3rem;
+}
+.subscription__price span {
+    font-size: 2.2rem;
+    font-weight: bold;
+    padding-right: 0.8rem;
+    color: white;
+
+}
+
+
+.subscription__price .month {
+    color:var(--lmainCyan);
+    display: flex;
+    align-items: center;
+}
+
+.subscription p {
+    font-size: 1.1rem;
+    color: var(--lighttgrey);
+    margin-top: 0.25rem;
+}
+
+.button a {
+    display: block; /* Takes 100% of with  */
+    color: var(--white); 
+    background-color:var(--mainYellow);
+    padding: 0.8rem;
+    border-radius: 0.3rem;
+    text-align: center;
+    margin-top: 1.5rem;
+    box-shadow: 0 0.7rem 1rem rgba(0,0,0,0.15);
+}
+
+.button a:hover {
+    background-color:var(--darkYellow);
+}
+
+/* WHY */ 
+.why {
+    background-color: var(--lmainCyan);
+    color: white;
+}
+
+.why ul li {
+    list-style-type:none;
+    font-size: 0.85rem;
+}
+
+.why ul {
+    padding-left: 0;
+}
+
+.why h3 {
+    color: var(--white);
+}
+/* General */ 
+a {
+    background-color:var(--mainYellow);
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 62.5em) {
+    .grid-container {
+        /* DESKTOP */ 
+        display: grid;
+        /* TOP 2 together and bottom 2splitted in left right */ 
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .community {
+        grid-area: 1 / 1 / 2 / 3
+    }
+}
+
+
+.grid-container {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    max-width: 40rem;
+    margin: auto;
+}
+
