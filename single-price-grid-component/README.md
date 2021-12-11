@@ -1,4 +1,4 @@
-Link to solution:
+Link to solution:Solution: https://teifler.github.io/simple-projects/single-price-grid-component/index.html
 
 
 
