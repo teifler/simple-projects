@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+:root {
+    --darkMagenta: hsl(300, 43%, 22%);
+    --softPink: hsl(333, 80%, 67%);
+
+    --grayishMagenta: hsl(303, 10%, 53%);
+    --lgrayMagenta: hsl(300, 24%, 96%);
+    --white: #fff;
+}
+
+h1, h2, h3, h4 {
+    margin-top: 0;
+}
+
+body {
+    font-family: 'Spartan', sans-serif;
+    font-size: 0.9rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.header section {
+    margin-bottom: 35px;
+}
+
+.header h1 {
+    color: var(--darkMagenta);
+}
+
+.header section {
+    color: var(--grayishMagenta);
+}
+
+.flex-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.star-box {
+    text-align: center;
+    padding-top: 0.875rem;
+    padding-bottom: 0.275rem;
+    background-color: var(--lgrayMagenta);
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.star-box h4 {
+    color: var(--darkMagenta);
+}
+
+.star-box h4 {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 115%;
+}
+
+
+/* Middel Review Text Boxes */ 
+
+.review-box {
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.review-box img {
+    border-radius: 100px;
+    height: 50px;
+}
+
+.review-box-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.review-box section {
+    align-self: flex-start;
+}
+.review-box {
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+    background-color: var(--darkMagenta);
+}
+
+.review-box-text h3 {
+    color: white;
+    margin-bottom: 3px;
+}
+
+.review-box-text p {
+    margin-top: 0;
+    color: var(--softPink);
+    letter-spacing: 0.1em;
+}
+
+.review-box-text section {
+    color:white;
+}
+
+
